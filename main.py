@@ -3,19 +3,9 @@ from flask_cors import CORS
 import instaloader 
 from instaloader import StoryItem
 import os
-import shutil
 import base64
 import time
 from moviepy.video.io.VideoFileClip import VideoFileClip
-
-
-def clear_cache():
-    cache_dirs = ["__pycache__", "instaloader-session"]
-    for cache_dir in cache_dirs:
-        if os.path.exists(cache_dir):
-            shutil.rmtree(cache_dir, ignore_errors=True)
-
-clear_cache()  # Run cache clearing
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
