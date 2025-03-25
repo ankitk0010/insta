@@ -15,6 +15,8 @@ def clear_cache():
         if os.path.exists(cache_dir):
             shutil.rmtree(cache_dir, ignore_errors=True)
 
+clear_cache()  # Run cache clearing
+
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
 
